@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableSports"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="6"
+                android:gravity="center"
+                android:text="Abonnements"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/DescriptionRow"
+            android:layout_width="match_parent"
+            android:layout_height="59dp">
+
+            <TextView
+                android:id="@+id/SportNomCol"
+                android:layout_height="34dp"
+                android:text="Sport"></TextView>
+
+            <TextView
+                android:id="@+id/TarifCompCol"
+                android:text="Tarif comp"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+
+            <TextView
+                android:id="@+id/TarifEntCol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarif entraîn"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+
+            <TextView
+                android:id="@+id/TarifLoisirCol"
+                android:layout_width="86dp"
+                android:text="Tarif loisir"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+
+            <TextView
+                android:id="@+id/AdhCol"
+                android:text="Adhérant ?"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+
+            <TextView
+                android:id="@+id/AdhType"
+                android:text="Type d'adhésion"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:id="@+id/BasketballRow"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/BasketballSport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basketball"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboBasketballComp"
+                android:gravity="center_horizontal"
+                android:text="10€"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboBasketballEntrain"
+                android:gravity="center_horizontal"
+                android:text="8€"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboBasketballLoisir"
+                android:gravity="center_horizontal"
+                android:text="5€"></TextView>
+
+            <TextView
+                android:id="@+id/AdhesionBasketball"
+                android:gravity="center_horizontal"
+                android:text=""></TextView>
+
+            <TextView
+                android:id="@+id/typeAdhesionBasketball"
+                android:gravity="center_horizontal"
+                android:text=""></TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:id="@+id/BaseballRow"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/BaseballSport"
+                android:text="Baseball"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboBaseballComp"
+                android:gravity="center_horizontal"
+                android:text="10€"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboBaseballEntrain"
+                android:gravity="center_horizontal"
+                android:text="8€"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboBaseballLoisir"
+                android:gravity="center_horizontal"
+                android:text="5€"></TextView>
+
+            <TextView
+                android:id="@+id/AdhesionBaseball"
+                android:gravity="center_horizontal"
+                android:text=""></TextView>
+
+            <TextView
+                android:id="@+id/typeAdhesionBaseball"
+                android:gravity="center_horizontal"
+                android:text=""></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:id="@+id/FootballRow"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/FootballSport"
+                android:text="Football"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboFootballComp"
+                android:gravity="center_horizontal"
+                android:text="10€"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboFootballEntrain"
+                android:gravity="center_horizontal"
+                android:text="8€"></TextView>
+
+            <TextView
+                android:id="@+id/prixAboFootballLoisir"
+                android:gravity="center_horizontal"
+                android:text="5€"></TextView>
+
+            <TextView
+                android:id="@+id/AdhesionFootball"
+                android:gravity="center_horizontal"
+                android:text=""></TextView>
+
+            <TextView
+                android:id="@+id/typeAdhesionFootball"
+                android:gravity="center_horizontal"
+                android:text=""></TextView>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textViewTarifCatComp"
+                android:gravity="center_horizontal"
+                android:text="Prix comp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/editTextTarifCatComp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textStyle="bold"></EditText>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textViewTarifCatEntrain"
+                android:gravity="center_horizontal"
+                android:text="Prix entraîn"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:id="@+id/editTextTarifCatEntrain"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textStyle="bold"></EditText>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textViewTarifCatLoisir"
+                android:gravity="center_horizontal"
+                android:text="Prix loisir"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:id="@+id/editTextTarifCatLoisir"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textStyle="bold"></EditText>
+        </TableRow>
+
+        <TableRow android:id="@+id/PrixTotal">
+            <TextView
+                android:id="@+id/textViewPrixTotal"
+                android:gravity="center_horizontal"
+                android:text="Prix total"
+                android:textStyle="bold"
+                android:textAllCaps="true"></TextView>
+            <EditText
+                android:id="@+id/editTextPrixTotal"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textStyle="bold"></EditText>
+        </TableRow>
+</TableLayout>
