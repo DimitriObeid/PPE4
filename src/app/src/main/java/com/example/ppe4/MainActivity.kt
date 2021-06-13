@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import android.widget.EditText
+import android.widget.Spinner
+import android.widget.SpinnerAdapter
+import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -39,10 +42,13 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
+
+      //  val itmSport = findViewById<Item>(R.id.nav_sports)
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
+                R.id.nav_home, R.id.nav_sports, R.id.nav_slideshow), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -71,8 +77,30 @@ class MainActivity : AppCompatActivity() {
 
     }
 */
+/*
+    fun setAdhesion() {
+        val spinner: Spinner = findViewById(R.id.dropdown_adh_id)
 
-    private fun adhesionTable() {
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(
+                this,
+                R.array.dropdown_adh_id,
+                android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinner.adapter = adapter
+        }
+    }
+*/
+    /*
+    fun calc(valeur1: Int, valeur2: Int, typeAbo: String): Int {
+        return (valeur1 + valeur2)
+    }
+    */
+
+    fun adhesionTable() {
         // Prix
         val prixComp = 10
         val prixEntrain = 8
@@ -83,11 +111,12 @@ class MainActivity : AppCompatActivity() {
         var prixTotalEntrain = 0
         var prixTotalLoisir = 0
 
-        // Colonne de vérification d'abonnement (avant-dernière colonne). Si abonné, alors
+        // Colonne de vérification d'abonnement (avant-dernière colonne).
         val aboBaseballCol = findViewById<TextView>(R.id.AdhesionBaseball)
         val aboBasketballCol = findViewById<TextView>(R.id.AdhesionBasketball)
         val aboFootballCol = findViewById<TextView>(R.id.AdhesionFootball)
 
+        /*
         val textViewGetAboBaseballCol: TextView = findViewById(R.id.AdhesionBaseball)
         val textViewGetAboBasketballCol: TextView = findViewById(R.id.AdhesionBasketball)
         val textViewGetAboFootballCol: TextView = findViewById(R.id.AdhesionFootball)
@@ -95,17 +124,15 @@ class MainActivity : AppCompatActivity() {
         val strTextViewGetAboBaseballCol: String = textViewGetAboBaseballCol.text.toString()
         val strTextViewGetAboBasketballCol: String = textViewGetAboBasketballCol.text.toString()
         val strTextViewGetAboFootballCol: String = textViewGetAboFootballCol.text.toString()
+*/
 
-
-        // Colonne de vérification de type d'abonnement (avant-dernière colonne). Si abonné
-        val typeAboBasketball = findViewById<TextView>(R.id.typeAdhesionBaseball)
-        val typeAboBaseball = findViewById<TextView>(R.id.typeAdhesionBasketball)
-        val typeAboFootball = findViewById<TextView>(R.id.typeAdhesionFootball)
-
+        // Colonne de vérification de type d'abonnement (dernière colonne).
+        // Obtention de l'identifiant de chaque case
         val textViewGetTypeAboBaseballCol: TextView = findViewById(R.id.typeAdhesionBaseball)
         val textViewGetTypeAboBasketballCol: TextView = findViewById(R.id.typeAdhesionBasketball)
         val textViewGetTypeAboFootballCol: TextView = findViewById(R.id.typeAdhesionFootball)
 
+        // Obtention du texte
         val strTextViewGetTypeAboBaseballCol: String = textViewGetTypeAboBaseballCol.text.toString()
         val strTextViewGetTypeAboBasketballCol: String = textViewGetTypeAboBasketballCol.text.toString()
         val strTextViewGetTypeAboFootballCol: String = textViewGetTypeAboFootballCol.text.toString()
@@ -129,9 +156,9 @@ class MainActivity : AppCompatActivity() {
         aboFootballCol.setText("oui").toString()
 
         // Assignation d'une valeur à la colonne d'adhérence à une catégorie
-        typeAboBaseball.setText("Loisir").toString()
-        typeAboBasketball.setText("Entrain").toString()
-        typeAboFootball.setText("Compétition").toString()
+        textViewGetTypeAboBaseballCol.setText("Loisir").toString()
+        textViewGetTypeAboBasketballCol.setText("Entrain").toString()
+        textViewGetTypeAboFootballCol.setText("Compétition").toString()
 
 
         // Additioner le tarif pour chaque catégorie, puis ajouter la somme au tarif total
@@ -167,10 +194,12 @@ class MainActivity : AppCompatActivity() {
         var strPrixTotalComp = prixTotalComp.toString()
         var strPrixTotalEntrain = prixTotalEntrain.toString()
         var strPrixTotalLoisir = prixTotalLoisir.toString()
+        var strPrixTotal = prixTotal.toString()
 
-        Toast.makeText(this, r, Toast.LENGTH_SHORT).show()
-        Toast.makeText(this, strPrixTotalEntrain, Toast.LENGTH_SHORT).show()
-        Toast.makeText(this, strPrixTotalLoisir, Toast.LENGTH_SHORT).show()
+        editTextPrixTotalComp.setText(strPrixTotalComp)
+        editTextPrixTotalEntrain.setText(strPrixTotalEntrain)
+        editTextPrixTotalLoisir.setText(strPrixTotalLoisir)
+        editTextPrixTotal.setText(strPrixTotal)
     }
 
   //  private fun afficherMenuConnexion() {
